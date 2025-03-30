@@ -1,0 +1,18 @@
+<div class="container text-center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Título</th>
+                <th scope="col">Body</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let p of placeholder">
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.title | slice:0:30 }}{{ p.title.length > 30 ? '...' : '' }}</td>
+                <td>{{ p.body | slice:0:30 }}{{ p.body.length > 30 ? '...' : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
